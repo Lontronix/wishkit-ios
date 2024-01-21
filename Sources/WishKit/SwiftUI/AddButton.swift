@@ -40,6 +40,7 @@ struct AddButton: View {
             .background(WishKit.theme.primaryColor)
             .clipShape(.circle)
             .shadow(color: .black.opacity(0.33), radius: 5, x: 0, y: 5)
+            .opacity(WishKit.config.buttons.addButton.display == .hide ? 0 : 1)
         #else
             VStack {
                 Image(systemName: "plus")
@@ -49,6 +50,7 @@ struct AddButton: View {
             .background(WishKit.theme.primaryColor)
             .clipShape(.circle)
             .shadow(color: .black.opacity(1/4), radius: 3, x: 0, y: 3)
+            .opacity(WishKit.config.buttons.addButton.display == .hide ? 0 : 1)
         #endif
     }
 

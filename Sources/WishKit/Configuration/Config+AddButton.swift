@@ -13,10 +13,13 @@ extension Configuration {
 
         public var textColor = Theme.Scheme(light: .black, dark: .white)
 
+        public var display: Display
+
         public var bottomPadding: Padding
 
-        init(bottomPadding: Padding = .small) {
+        init(bottomPadding: Padding = .small, display: Display = .show) {
             self.bottomPadding = bottomPadding
+            self.display = display
         }
     }
 }
